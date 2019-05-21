@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {  Layout, Menu, Icon,Input,Button,Card,Row,Col} from 'antd';
+import {  Layout, Menu, Icon,Input,Button,Card,Row,Col,Popover} from 'antd';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 const { Header, Sider, Content ,Footer} = Layout;
@@ -40,24 +40,55 @@ export default class SiderDemo extends React.Component {
             
         </Sider>
         <Layout>
-          <Header style={{ background: '#1DA569', padding:0, }} >
-           <div id="nav"
-           /* style={{display:"flex",flexDirection:"row",padding:0,height:"100%"}} */
-          >
-          <Button type="primary" style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",marginRight:30}}>
-            <Icon type="appstore" style={{alignSelf:"center"}}/>
-               <div> aaa </div>
+          <Header style={{ background: '#1DA569', padding:0,}} >
+          <div className="main-nav">
+           <div className="nav" >
+          <Popover title=">>>>">
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div>文件 </div>
           </Button>
-          <Button type="primary" style={{height:"100%" ,margin:"",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-            <Icon type="appstore" style={{alignSelf:"center"}}/>
-               <div> aaa </div>
+          </Popover>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 编辑 </div>
           </Button>
-          <Button type="primary" style={{height:"100%" ,margin:"",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-            <Icon type="appstore" style={{alignSelf:"center"}}/>
-               <div> aaa </div>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 导入 </div>
+          </Button>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 形状 </div>
+          </Button>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 文本 </div>
+          </Button>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 画笔 </div>
+          </Button>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 属性 </div>
           </Button>
         </div> 
-       
+        <div className="nav reverse" >
+          <Button type="primary" >
+            <Icon type="appstore"/>
+               <div> 个人 </div>
+          </Button>
+          <Button type="primary">
+            <Icon type="appstore"/>
+               <div> 团队 </div>
+          </Button>
+          <Button type="primary" style={{marginLeft:330}}>
+            <Icon type="appstore"/>
+               <div> 资源 </div>
+          </Button>
+          </div>
+        </div>
           </Header>
           
           <Layout style={{padding: ' 24px',}}>
