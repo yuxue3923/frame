@@ -40,26 +40,14 @@ export default class SiderDemo extends React.Component {
             
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding:0, }}>
-          <Row gutter={8}>
-          <Col span={6}>
-          <Icon type="appstore" />
-            <div> aaa </div>
-          </Col>
-          <Col span={6}>
-          <Icon type="appstore" />
-            <div> aaa </div>
-          </Col>
-          <Col span={6}>
-          <Icon type="appstore" />
-            <div> aaa </div>
-          </Col>
-          </Row>
-          {/* <div style={{display:"flex",flexDirection:"row",padding:0,height:"100%"}}>
-          <div type="primary" style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+          <Header style={{ background: '#1DA569', padding:0, }} >
+           <div id="nav"
+           /* style={{display:"flex",flexDirection:"row",padding:0,height:"100%"}} */
+          >
+          <Button type="primary" style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",marginRight:30}}>
             <Icon type="appstore" style={{alignSelf:"center"}}/>
                <div> aaa </div>
-          </div>
+          </Button>
           <Button type="primary" style={{height:"100%" ,margin:"",display:"flex",flexDirection:"column",justifyContent:"center"}}>
             <Icon type="appstore" style={{alignSelf:"center"}}/>
                <div> aaa </div>
@@ -68,7 +56,7 @@ export default class SiderDemo extends React.Component {
             <Icon type="appstore" style={{alignSelf:"center"}}/>
                <div> aaa </div>
           </Button>
-        </div> */}
+        </div> 
        
           </Header>
           
