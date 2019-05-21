@@ -74,7 +74,7 @@ export default class SiderDemo extends React.Component {
                <div> 属性 </div>
           </Button>
         </div> 
-        <div className="nav reverse" >
+        <div className="nav reverse" style={{width:"100%"}}>
           <Button type="primary" >
             <Icon type="appstore"/>
                <div> 个人 </div>
@@ -83,7 +83,7 @@ export default class SiderDemo extends React.Component {
             <Icon type="appstore"/>
                <div> 团队 </div>
           </Button>
-          <Button type="primary" style={{marginLeft:330}}>
+          <Button type="primary" style={{marginLeft:"10%"}}>
             <Icon type="appstore"/>
                <div> 资源 </div>
           </Button>
