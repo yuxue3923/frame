@@ -53,8 +53,9 @@ handclick(){
             </Button>
           </div> */}
           <div className="App"/>
-          <Input style={{width:"300px"}}onChange={this.change.bind(this)} placeholder="你的名字"/>
-         <Link to='/app/pagefir'><Button onClick={this.handclick.bind(this)} type="primary">登录</Button></Link>
+          {/* <Input style={{width:"300px"}}onChange={this.change.bind(this)} placeholder="你的名字"/> */}
+         <Link to='/app'><Button onClick={this.handclick.bind(this)} type="primary">编辑课件</Button></Link>
+         <Link to='/pagefir'><Button type="primary">创建课件</Button></Link>
       </div>
     );
   }

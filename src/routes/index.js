@@ -9,9 +9,7 @@ import Reducer from '../reducers/index';
 import login from '../login'
 import APP from '../App.js'
 import pagefir from '../pagefirst.js'
-import pagesec from '../pagesecond.js'
-import pagethir from '../pagethird.js'
-import pagefour from '../pagefour.js'
+
 import Page from './Page.js';
 const store=createStore(Reducer)
 export default class RouteIndex extends Component {
@@ -23,14 +21,8 @@ export default class RouteIndex extends Component {
         {/* {<Redirect to="/"/>} */}
           <Switch>
              <Route exact path="/" component={login}></Route>
-             <APP path="/app">
-                <Switch>
-                    <Route path="/app/pagefir" component={pagefir}></Route>
-                    <Route path="/app/pagesec" component={pagesec}></Route>
-                    <Route path="/app/pagethir" component={pagethir}></Route>
-                    <Route path="/app/pagefour" component={pagefour}></Route>
-                </Switch>
-             </APP>
+             <Route path="/app" component={APP}></Route>
+             <Route path="/pagefir" component={pagefir}></Route>
           </Switch>
           </Page>
        </BrowserRouter>

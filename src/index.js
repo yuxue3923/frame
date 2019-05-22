@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import RouteIndex from './routes/index';
-import Pictrim from './Pictrim';
+// import Pictrim from './Pictrim';
 
 ReactDOM.render(<RouteIndex/>, document.getElementById('root'));
 
