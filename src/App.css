@@ -38,14 +38,14 @@
   flex-direction:row;
    justify-content:center; 
   align-items: center;
-  margin-right:3%
+  margin-right:1%
 }
 /* .nav .ant-btn::after{
   opacity: 0.1;
 } */
 .nav .ant-btn>div{
    margin-bottom: 7%;
-  font-size: 1.3em;
+  font-size: 18px;
   font-family: Georgia,Times New Roman,Times,Songti SC,serif;
   align-self:center;
   
@@ -57,6 +57,19 @@
 /* .nav .anticon{
   align-self:center;
 } */
+
+.wid-content{
+  width: 100%;
+}
+.wid-shrink{ 
+  width: 80%
+  /*
+  用于出现新的
+  */
+}
+.wid-footer{
+  width: 100%;
+}
 .reverse{
   display:flex;
   flex-direction:row-reverse;

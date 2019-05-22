@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import {  Layout, Menu, Icon,Input,Button,Card,Row,Col,Popover} from 'antd';
+import {  Layout, Menu, Icon,Input,Button,Card,Popover,Drawer} from 'antd';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 const { Header, Sider, Content ,Footer} = Layout;
 const {TextArea} = Input;
-const ButtonGroup = Button.Group;
-export default class SiderDemo extends React.Component {
+
+export default class SiderDemo extends Component {
   state = {
     collapsed: false,
+    sourceVisible: false, 
+  };
+ 
+  showResource = () => {
+    this.setState(function(preState,props){
+      return { sourceVisible:!preState.sourceVisible }
+    });
   };
 
   toggle = () => {
@@ -35,7 +42,7 @@ export default class SiderDemo extends React.Component {
         <div className="logo">
          </div>
           
-        <Card style={{width:200,height:115,margin: "21px"}} className="single-viewer">
+        <Card style={{width:"200",height:115,margin: "21px"}} className="single-viewer">
         </Card>
             
         </Sider>
@@ -83,10 +90,22 @@ export default class SiderDemo extends React.Component {
             <Icon type="appstore"/>
                <div> 团队 </div>
           </Button>
-          <Button type="primary" style={{marginLeft:"10%"}}>
+          <Button type="primary" style={{marginLeft:"10%"}} onClick={this.showResource}>
             <Icon type="appstore"/>
                <div> 资源 </div>
           </Button>
+          <Drawer
+              style={{ margin: '8px 0 8px 0' }}
+              title="Basic Drawer"
+              closable={false}
+              maskClosable={false}
+              mask={false}
+              visible={this.state.sourceVisible}
+          >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Drawer>
           </div>
         </div>
           </Header>
@@ -94,19 +113,19 @@ export default class SiderDemo extends React.Component {
           <Layout style={{padding: ' 24px',}}>
           <Content
             style={{
-            //  margin: '24px 16px',
-              padding:24,
+               padding:24,
               background: '#fff',
-              width: '100%', height: '100vh',
-    
+            //  width: '100%',
+               height: '100vh', 
             }}
+            className={this.state.sourceVisible?"wid-shrink":"wid-content"}
           >
         
             Content
          
           </Content>
           </Layout>
-          <Footer style={{ background: '#fff', padding: 10 }}>
+          <Footer style={{ background: '#fff', padding:10 ,margin:10}} className={this.state.sourceVisible?"wid-shrink":"wid-footer"}>
           <Icon
              // className="trigger"
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
