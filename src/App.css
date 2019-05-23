@@ -42,6 +42,33 @@
   align-items: center;
   margin-right:1%
 }
+.second .ant-btn{
+  margin:0;
+  height:100%;
+}
+.second-button{
+  padding:5px;
+}
+.second-button .ant-btn-primary{
+  background-color:#fff;
+  border-color: #fff #1DA569 #fff #fff;
+  color: #1DA569;
+  border-radius:0;
+  font-family: Georgia,Times New Roman,Times,Songti SC,serif;
+  font-weight: 700;
+}
+.second-button .ant-btn-primary.at-right-border{
+  background-color:#fff;
+  border-color: #fff;
+  color: #1DA569;
+  border-radius:0;
+}
+.second-button .ant-btn-primary .anticon{
+  color: #1DA569;
+}
+.second-button .ant-btn-primary>div{
+  margin-top: 0px;
+}
 /* .nav .ant-btn::after{
   opacity: 0.1;
 } */
@@ -64,7 +91,7 @@
   width: 100%;
 }
 .wid-shrink{ 
-  width: 80%
+  width: 76%
   /*
   用于出现新的
   */
@@ -79,12 +106,16 @@
 .ant-popover-content {
   opacity: 0.7;
 }
+#tests .ant-popover-inner-content {
+  padding: 0px;
+ 
+}
 .ant-popover-inner {
   background-color: #00000000;
   background-clip: padding-box;
   border-radius: 0px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  margin: 0px 0px 0px -10px;
+  margin: 0;
 }
 .ant-popover-placement-right, .ant-popover-placement-rightTop, .ant-popover-placement-rightBottom {
   padding-left:0px;

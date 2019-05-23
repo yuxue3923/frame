@@ -5,6 +5,43 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 const { Header, Sider, Content ,Footer} = Layout;
 const {TextArea} = Input;
+const content1 = (
+  <div className="second-button">
+    <Button type="primary" size="large">
+            <Icon type="appstore"/>
+               <div>新建 </div>
+      </Button>
+     <Button type="primary" size="large">
+            <Icon type="appstore"/>
+               <div>保存 </div>
+      </Button>
+      <Button type="primary" size="large">
+            <Icon type="appstore"/>
+               <div>分享 </div>
+      </Button>
+      <Button type="primary" size="large" className="at-right-border">
+            <Icon type="appstore"/>
+               <div>导出 </div>
+      </Button>
+  </div>
+);
+const content2 = (
+  <div className="second-button">
+     <Button type="primary" size="large">
+            <Icon type="appstore"/>
+               <div>新增 </div>
+      </Button>
+      <Button type="primary" size="large">
+            <Icon type="appstore"/>
+               <div>undo </div>
+      </Button>
+      <Button type="primary" size="large" className="at-right-border">
+            <Icon type="appstore"/>
+               <div>redo </div>
+      </Button>
+  </div>
+);
+
 
 export default class SiderDemo extends Component {
   state = {
@@ -50,16 +87,22 @@ export default class SiderDemo extends Component {
           <Header style={{ background: '#1DA569', padding:0,}} >
           <div className="main-nav">
            <div className="nav" >
-          <Popover title=">>>>">
+           
+          <Popover placement="bottomLeft" content={content1} id="tests">
           <Button type="primary">
             <Icon type="appstore"/>
                <div>文件 </div>
           </Button>
           </Popover>
+          
+          <Popover placement="bottomLeft" content={content2} id="tests">
           <Button type="primary">
             <Icon type="appstore"/>
                <div> 编辑 </div>
           </Button>
+          </Popover>
+
+
           <Button type="primary">
             <Icon type="appstore"/>
                <div> 导入 </div>
@@ -95,7 +138,7 @@ export default class SiderDemo extends Component {
                <div> 资源 </div>
           </Button>
           <Drawer
-              style={{ margin: '3.8% 0 8px 0'}}
+              style={{ margin: '3.8% 0 8px 0px'}}
               title="Basic Drawer"
               width="18.5%"
               closable={false}
@@ -111,13 +154,14 @@ export default class SiderDemo extends Component {
         </div>
           </Header>
           
-          <Layout style={{padding: ' 24px',}}>
+          <Layout style={{padding: ' 24px', margin:'0 3px 0 0'}}>
           <Content
             style={{
                padding:24,
               background: '#fff',
             //  width: '100%',
                height: '100vh', 
+              
             }}
             className={this.state.sourceVisible?"wid-shrink":"wid-content"}
           >
