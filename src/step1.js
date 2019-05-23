@@ -198,18 +198,18 @@ onSelect(selectedKeys, info) {
           visible={this.state.visible}
         >
            <Tree showLine defaultExpandedKeys={['2']} onSelect={this.onSelect.bind(this)}>
-        <TreeNode title="parent 1" key="1">
-          <TreeNode title="parent 1-0" key="2">
-            <TreeNode title="leaf" key="21" />
-            <TreeNode title="leaf" key="22" />
-            <TreeNode title="leaf" key="23" />
+        <TreeNode title="parent 1" key={1}>
+          <TreeNode title="parent 1-0" key={2}>
+            <TreeNode title="leaf" key={1} />
+            <TreeNode title="leaf" key={2} />
+            <TreeNode title="leaf" key={3} />
           </TreeNode>
-          <TreeNode title="parent 1-1" key="3">
-            <TreeNode title="leaf" key="31" />
+          <TreeNode title="parent 1-1" key={3}>
+            <TreeNode title="leaf" key={1} />
           </TreeNode>
-          <TreeNode title="parent 1-2" key="4">
-            <TreeNode title="leaf" key="41" />
-            <TreeNode title="leaf" key="42" />
+          <TreeNode title="parent 1-2" key={4}>
+            <TreeNode title="leaf" key={1} />
+            <TreeNode title="leaf" key={2} />
           </TreeNode>
         </TreeNode>
       </Tree>
