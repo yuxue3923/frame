@@ -3,9 +3,12 @@ import './App.css';
 import {  Layout, Menu, Icon,Input,Button,Card,Popover,Drawer} from 'antd';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
+import NavBtn from './components/NavBtn'
+import {file} from './components/SndBtn'
+
 const { Header, Sider, Content ,Footer} = Layout;
 const {TextArea} = Input;
-const content1 = (
+const content1 = 
   <div className="second-button">
     <Button type="primary" size="large">
             <Icon type="appstore"/>
@@ -24,7 +27,7 @@ const content1 = (
                <div>导出 </div>
       </Button>
   </div>
-);
+;
 const content2 = (
   <div className="second-button">
      <Button type="primary" size="large">
@@ -88,14 +91,15 @@ export default class SiderDemo extends Component {
           <div className="main-nav">
            <div className="nav" >
            
-          <Popover placement="bottomLeft" content={content1} id="tests">
+          {/* <Popover placement="bottomLeft" content={content1} overlayClassName="self-popover">
           <Button type="primary">
             <Icon type="appstore"/>
                <div>文件 </div>
           </Button>
-          </Popover>
-          
-          <Popover placement="bottomLeft" content={content2} id="tests">
+          </Popover> */}
+         <NavBtn buttonName="文件" content={file} />
+
+          <Popover placement="bottomLeft" content={content2} overlayClassName="self-popover">
           <Button type="primary">
             <Icon type="appstore"/>
                <div> 编辑 </div>
@@ -107,6 +111,7 @@ export default class SiderDemo extends Component {
             <Icon type="appstore"/>
                <div> 导入 </div>
           </Button>
+         {/*  <NavBtn buttonName ="导入" /> */}
           <Button type="primary">
             <Icon type="appstore"/>
                <div> 形状 </div>
