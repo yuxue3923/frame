@@ -7,6 +7,20 @@ function reducerlogin(state={},action){
           return state;
     }
 }
+//echarts状态1
+function reducer_echarts(state = {}, action) {
+    switch (action.type) {
+        case 'EchartsIndexName':
+            // console.log("EchartsIndexName_reducers");
+            // console.log(action.payload);
+            return {
+                EchartsIndexName: action.payload
+            };
+        default:
+            return state;
+    }
+}
 export default combineReducers({
     reducerlogin,
+    reducer_echarts,
 })

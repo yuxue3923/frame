@@ -40,11 +40,15 @@ class Create extends Component {
     console.log(current)
     this.setState({ current: current })
   }
+  handleClick3(current) {
+    console.log(current)
+    this.setState({ current: current })
+  }
 
   componentWillMount() {
     const step1 = (<div><Step1 GetStates={this.handleClick1.bind(this)} /></div>)
     const step2 = (<div><Step2 GetStates={this.handleClick2.bind(this)} /></div>)
-    const step3 = (<div><Step3 /></div>)
+    const step3 = (<div><Step3 GetStates={this.handleClick3.bind(this)} /></div>)
     this.state.step_content.push(step1)
     this.state.step_content.push(step2)
     this.state.step_content.push(step3)
@@ -55,8 +59,8 @@ class Create extends Component {
       <div >
         <Layout style={{ padding: '10px 0', backgroundColor: "#fff" }}>
           <Row>
-            <Col span={2}></Col>
-            <Col span={20}>
+            {/* <Col span={2}></Col>
+            <Col span={20}> */}
               <Card bordered={false}>
                 <div>
                   <Steps current={current}>
@@ -67,8 +71,8 @@ class Create extends Component {
                   </div>
                 </div>
               </Card>
-            </Col>
-            <Col span={2}></Col>
+            {/* </Col>
+            <Col span={2}></Col> */}
           </Row>
         </Layout>
       </div>
