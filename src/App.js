@@ -113,7 +113,8 @@ export default class SiderDemo extends Component {
                <div> 资源 </div>
           </Button>
           <Drawer
-              style={{ margin: '3.8% 0 8px 0px'}}
+              // style={{ margin: '3.8% 0 8px 0px'}}
+              style={{ margin: '4.7% 0 8px 0px'}}
               title="Basic Drawer"
               width="18.5%"
               closable={false}
