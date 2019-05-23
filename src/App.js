@@ -4,7 +4,7 @@ import {  Layout, Menu, Icon,Input,Button,Card,Popover,Drawer} from 'antd';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import NavBtn from './components/NavBtn'
-import {file} from './components/SndBtn'
+import {file,edit,imbort,shape,text,pen,attr,group} from './components/SndBtn'
 
 const { Header, Sider, Content ,Footer} = Layout;
 const {TextArea} = Input;
@@ -91,53 +91,23 @@ export default class SiderDemo extends Component {
           <div className="main-nav">
            <div className="nav" >
            
-          {/* <Popover placement="bottomLeft" content={content1} overlayClassName="self-popover">
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div>文件 </div>
-          </Button>
-          </Popover> */}
+          
          <NavBtn buttonName="文件" content={file} />
+         <NavBtn buttonName="编辑" content={edit} />
+         <NavBtn buttonName="导入" content={imbort} />
+         <NavBtn buttonName="形状" content={shape} />
+         <NavBtn buttonName="文本" content={text} />
+         <NavBtn buttonName="画笔" content={pen} />
+         <NavBtn buttonName="属性" content={attr} />
 
-          <Popover placement="bottomLeft" content={content2} overlayClassName="self-popover">
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 编辑 </div>
-          </Button>
-          </Popover>
-
-
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 导入 </div>
-          </Button>
-         {/*  <NavBtn buttonName ="导入" /> */}
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 形状 </div>
-          </Button>
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 文本 </div>
-          </Button>
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 画笔 </div>
-          </Button>
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 属性 </div>
-          </Button>
         </div> 
         <div className="nav reverse" style={{width:"100%"}}>
+        <NavBtn buttonName="团队" content={group} />
           <Button type="primary" >
             <Icon type="appstore"/>
                <div> 个人 </div>
           </Button>
-          <Button type="primary">
-            <Icon type="appstore"/>
-               <div> 团队 </div>
-          </Button>
+        
           <Button type="primary" style={{marginLeft:"10%"}} onClick={this.showResource}>
             <Icon type="appstore"/>
                <div> 资源 </div>
@@ -155,6 +125,7 @@ export default class SiderDemo extends Component {
           <p>Some contents...</p>
           <p>Some contents...</p>
         </Drawer>
+        
           </div>
         </div>
           </Header>
