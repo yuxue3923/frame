@@ -4,7 +4,7 @@ import {  Layout, Menu, Icon,Input,Button,Card,Popover,Drawer} from 'antd';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import NavBtn from './components/NavBtn'
-import {file} from './components/SndBtn'
+import {file,edit} from './components/SndBtn'
 
 const { Header, Sider, Content ,Footer} = Layout;
 const {TextArea} = Input;
@@ -98,14 +98,14 @@ export default class SiderDemo extends Component {
           </Button>
           </Popover> */}
          <NavBtn buttonName="文件" content={file} />
-
-          <Popover placement="bottomLeft" content={content2} overlayClassName="self-popover">
+        
+          {/* <Popover placement="bottomLeft" content={content2} overlayClassName="self-popover">
           <Button type="primary">
             <Icon type="appstore"/>
                <div> 编辑 </div>
           </Button>
-          </Popover>
-
+          </Popover> */}
+          <NavBtn buttonName="编辑" content={edit} />
 
           <Button type="primary">
             <Icon type="appstore"/>
@@ -143,7 +143,8 @@ export default class SiderDemo extends Component {
                <div> 资源 </div>
           </Button>
           <Drawer
-              style={{ margin: '3.8% 0 8px 0px'}}
+              // style={{ margin: '3.8% 0 8px 0px'}}
+              style={{ margin: '4.7% 0 8px 0px'}}
               title="Basic Drawer"
               width="18.5%"
               closable={false}

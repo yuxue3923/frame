@@ -15,11 +15,15 @@ export default class SndBtn extends Component {
         return <div className="second-button">{list}</div>
     }
 }
-const fileNameAndIconList = [{name:"新建",icon:"appstore"},{name:"保存",icon:"appstore"},{name:"分享",icon:"appstore"},{name:"保存",icon:"appstore"}];
+const fileNameAndIconList = [{name:"新建",icon:"appstore"},{name:"保存",icon:"appstore"},{name:"分享",icon:"appstore"},{name:"导出",icon:"appstore"}];
 const fileFns = [function(){console.log("I'm fileFn1")},function(){console.log("I'm fileFn2")},function(){console.log("I'm fileFn3")},function(){console.log("I'm fileFn4")}];
 const fileMsg = fileNameAndIconList.reduce((acc,curr,i)=>acc.concat([Object.assign({},curr,{fn:fileFns[i]})]),[]);
 
-const editNameAndIconList = ['新增','undo','redo'];
+const editNameAndIconList = [{name:"新增",icon:"appstore"},{name:"undo",icon:"appstore"},{name:"redo",icon:"appstore"}];
+const editFns = [function(){console.log("I'm editFn1")},function(){console.log("I'm editFn2")},function(){console.log("I'm editFn3")}];
+const editMsg = editNameAndIconList.reduce((acc,curr,i)=>acc.concat([Object.assign({},curr,{fn:editFns[i]})]),[]);
+
+
 
 const importNameList = ['PDF','图片','音视频'];
 
@@ -32,6 +36,7 @@ const penNameList = [];
 const attrNameList = [];
 
 const file = <SndBtn msgArr={fileMsg} />;
+const edit=<SndBtn msgArr={editMsg}/>;
 /* const edit = <SndBtn msgArr={editMsg} /> */
 
-export {file }
+export {file, edit}
