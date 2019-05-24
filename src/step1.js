@@ -11,11 +11,11 @@ const dataSource_catalog = ["语文", "数学","英语","物理","化学","生�
 
 const children_class = [];
 for (let i = 0; i < dataSource_class.length; i++) {
-  children_class.push(<Option value={dataSource_class[i]}>{dataSource_class[i]}</Option>);
+  children_class.push(<Option key={i} value={dataSource_class[i]}>{dataSource_class[i]}</Option>);
 }
 const children_catalog = [];
 for (let i = 0; i < dataSource_catalog.length; i++) {
-  children_catalog.push(<Option value={dataSource_catalog[i]}>{dataSource_catalog[i]}</Option>);
+  children_catalog.push(<Option key={i} value={dataSource_catalog[i]}>{dataSource_catalog[i]}</Option>);
 }
 
 class Step1 extends Component {
@@ -118,7 +118,7 @@ onSelect(selectedKeys, info) {
       <div>
       <div style={{marginTop:"50px"}}>
         <Form>
-          <Form.Item {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>课件名称</span>}  >
+          <Form.Item key={1} {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>课件名称</span>}  >
                         {getFieldDecorator('coursename', {
                             initialValue: this.state.coursename,
                             rules: [
@@ -128,7 +128,7 @@ onSelect(selectedKeys, info) {
                             <Input onChange={(e) => { this.setState({ coursename: e.target.value }) }} />
                         )}
           </Form.Item>
-          <Form.Item {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>年级</span>} >
+          <Form.Item key={2} {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>年级</span>} >
                         {getFieldDecorator('class', {
                             initialValue: this.state.class,
                             rules: [{ required: true, message: '请选择年级!', whitespace: true },],
@@ -142,7 +142,7 @@ onSelect(selectedKeys, info) {
                             </Select>
                         )}
           </Form.Item>
-          <Form.Item {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>科目</span>} >
+          <Form.Item key={3}  {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>科目</span>} >
                         {getFieldDecorator('catalog', {
                             initialValue: this.state.catalog,
                             rules: [{ required: true, message: '请选择科目!', whitespace: true },],
@@ -156,7 +156,7 @@ onSelect(selectedKeys, info) {
                             </Select>
                         )}
           </Form.Item>
-          <Form.Item {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>课件简介</span>}  >
+          <Form.Item key={4} {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>课件简介</span>}  >
                         {getFieldDecorator('abstract', {
                             initialValue: this.state.abstract,
                             rules: [
@@ -167,7 +167,7 @@ onSelect(selectedKeys, info) {
                         )}
           </Form.Item>
           <Divider>关联知识点</Divider>
-          <Form.Item {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>关联知识点</span>}  >
+          <Form.Item key={5} {...formItemLayout} style={{ marginBottom: '0px' }} label={<span style={{ fontWeight: 'bold' }}>关联知识点</span>}  >
                  <Row  gutter={8}>
                   <Col span={20}>    
                         {/* {getFieldDecorator('releknowledge', {
