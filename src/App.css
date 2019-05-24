@@ -34,10 +34,27 @@
   padding:0;
   height:100%;
 }
+.nav.col{
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  height:100%;
+}
+.nav.col.tool{
+  margin-right:0;
+}
 .nav .ant-btn{
   height:100%;
   display:flex;
   flex-direction:row;
+  justify-content:center; 
+  align-items: center;
+  margin-right:1%;
+  
+}
+.nav.tool .ant-btn{
+  display:flex;
+  flex-direction:column;
   justify-content:center; 
   align-items: center;
   margin-right:1%
@@ -69,9 +86,21 @@
 .second-button .ant-btn-primary>div{
   margin-top: 0px;
 }
-/* .nav .ant-btn::after{
-  opacity: 0.1;
-} */
+
+.nav.tool .ant-btn{
+  background-color:rgb(227,227,227);
+  border-color: #fff #1DA569 #fff #fff;
+  width:68px;
+  border-radius:0;
+  margin-right:0;
+  color: #1DA569;
+}
+.nav.tool .ant-btn.at-right-border{ 
+  border-color: #fff;
+}
+.nav.tool .ant-btn .anticon{
+  color: #1DA569;
+}
 .nav .ant-btn>div{
    margin-bottom: 7%;
   font-size: 18px;
@@ -79,8 +108,16 @@
   align-self:center;
   
 }
+.nav.tool .ant-btn>div{
+  margin-bottom:0;
+  font-size: 10px;
+}
 .nav .ant-btn .anticon{
   font-size: 28px;
+  align-self:center;
+}
+.nav .ant-btn .anticon.shrink{
+  font-size: 8px;
   align-self:center;
 }
 /* .nav .anticon{
@@ -126,16 +163,25 @@
   width:0;
   height: 0;
 }
-
-
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #364d79;
-  overflow: hidden;
+.ant-carousel{
+  /* display: flex; */
 }
 
+  
+.ant-carousel .slick-list .slick-track .slick-slide {
+  display: flex;
+  /* text-align: center;  */
+  justify-content:center; 
+  align-items: center; 
+  height: 100%;
+  /* line-height: 160px; */
+  background: #364d79;
+  /* overflow: hidden; */
+}
+
+.ant-carousel .slick-slide img{
+  align-self: center;
+}
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
