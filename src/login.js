@@ -57,6 +57,7 @@ handclick(){
          <Link to='/app'><Button onClick={this.handclick.bind(this)} type="primary">编辑课件</Button></Link>
          <Link to='/pagefir'><Button type="primary">创建课件</Button></Link>
          <Link to='/teach'><Button type="primary">授课</Button></Link>
+         <Link to='/preview'><Button type="primary">预览</Button></Link>
       </div>
     );
   }

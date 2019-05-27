@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
+import PropTypes from "prop-types";
 import { Button,Input, Icon ,Carousel} from 'antd';
 
 
 var isVisible = true;
 
 export default class Teach extends Component {
-
+    static contextTypes = {
+        router: PropTypes.object
+    }
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+           currentpage:1,
+        };
+    }
    
-   onChange(a, b, c) {
-        console.log(a, b, c);
+   onChange=(current)=> {
+        console.log(current);
+        this.setState({
+            currentpage:current+1,
+        });
       }
     next(){
         this.refs.Carousel.next();
@@ -39,7 +51,7 @@ export default class Teach extends Component {
       </div> 
       <div style={{position:"absolute" ,height:"auto",top:"94%",right:"0",zIndex:"99"}} className="nav tool"> 
         <Button type="primary" size="small" block onClick={()=>this.prev()}><Icon type="appstore"/><div>上一页</div></Button>
-        <Button type="primary" size="small" block><Icon type="appstore"/><div>页码</div></Button>
+        <Button type="primary" size="small" block><Icon type="appstore"/><div>{this.state.currentpage}/5</div></Button>
         <Button type="primary" size="small" block className="at-right-border" onClick={()=>this.next()}><Icon type="appstore"/><div>下一页</div></Button>
       </div> 
      

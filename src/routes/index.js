@@ -10,6 +10,7 @@ import login from '../login'
 import APP from '../App.js'
 import pagefir from '../pagefirst.js'
 import teach from '../teach.js'
+import preview from '../preview.js'
 
 import Page from './Page.js';
 const store=createStore(Reducer)
@@ -25,6 +26,7 @@ export default class RouteIndex extends Component {
              <Route path="/app" component={APP}></Route>
              <Route path="/pagefir" component={pagefir}></Route>
              <Route path="/teach" component={teach}></Route>
+             <Route path="/preview" component={preview}></Route>
           </Switch>
           </Page>
        </BrowserRouter>
