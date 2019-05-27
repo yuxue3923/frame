@@ -68,12 +68,12 @@ export default class Teach extends Component {
   render(){
       return (
       <div onMouseMove={(e)=>this.displayNav(e)} ref="page">
-       <div style={{position:"absolute" ,height:"auto",top:"94%",left:"0%",zIndex:"99"}} className="nav tool"> 
+       <div style={{position:"absolute" ,height:"auto",bottom:"0%",left:"0%",zIndex:"99"}} className="nav tool"> 
         <Button type="primary" size="small" block><Icon type="appstore"/><div>菜 单</div></Button>
         <Button type="primary" size="small" block><Icon type="appstore"/><div>最小化</div></Button>
         <Button type="primary" size="small" block className="at-right-border"><Icon type="appstore"/><div>用 户</div></Button>
       </div> 
-      <div style={{position:"absolute" ,height:"auto",top:"94%",right:"0",zIndex:"99"}} className="nav tool"> 
+      <div style={{position:"absolute" ,height:"auto",bottom:"0%",right:"0",zIndex:"99"}} className="nav tool"> 
         <Button type="primary" size="small" block onClick={()=>this.prev()}><Icon type="appstore"/><div>上一页</div></Button>
         <Button type="primary" size="small" block><Icon type="appstore"/><div>{this.state.currentpage}/5</div></Button>
         <Button type="primary" size="small" block className="at-right-border" onClick={()=>this.next()}><Icon type="appstore"/><div>下一页</div></Button>
