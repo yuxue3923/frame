@@ -86,7 +86,6 @@
 .second-button .ant-btn-primary>div{
   margin-top: 0px;
 }
-
 .nav.tool .ant-btn{
   background-color:rgb(227,227,227);
   border-color: #fff #1DA569 #fff #fff;
@@ -123,7 +122,14 @@
 /* .nav .anticon{
   align-self:center;
 } */
-
+.head_one{
+  font-size: 20px;
+  margin: 8px 8px 8px 8px;
+}
+.head_two{
+  font-size: 16px;
+  margin: 8px 8px 8px 8px;
+}
 .wid-content{
   width: 100%;
 }
