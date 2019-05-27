@@ -22,7 +22,31 @@ export default class Teach extends Component {
         this.setState({
             currentpage:current+1,
         });
-      }
+    }
+   displayNav(e){
+    let pointer = this.refs.shrink;
+    let x = e.screenX;
+    let y = e.screenY;
+       console.log(e.screenX,e.screenY)
+       console.log(pointer.offsetLeft)
+      
+       let divx1 = pointer.offsetLeft;  
+       var divy1 = pointer.offsetTop;  
+       var divx2 = pointer.offsetLeft + pointer.offsetWidth;  
+       var divy2 = pointer.offsetTop + pointer.offsetHeight; 
+       if( x < divx1 || x > divx2 || y < divy1 || y > divy2);
+        else {
+            if(!isVisible){
+                this.refs.shrink.style.visibility="visible";
+                isVisible = true;
+            }  
+        }
+        /* if(e.screenX<&&e.screenX>) */ 
+        //this.refs.page
+   }
+//    onChange(a, b, c) {
+//         console.log(a, b, c);
+//       }
     next(){
         this.refs.Carousel.next();
     }
@@ -32,18 +56,18 @@ export default class Teach extends Component {
     }
     shrink(){
         if(isVisible) {
-            this.refs.shrink.style.display="none";
+            this.refs.shrink.style.visibility="hidden";
             isVisible = false;
         }
         else{
-            this.refs.shrink.style.display="block";
+            this.refs.shrink.style.visibility="visible";
             isVisible = true;
         }
       
     }
   render(){
       return (
-      <div >
+      <div onMouseMove={(e)=>this.displayNav(e)} ref="page">
        <div style={{position:"absolute" ,height:"auto",top:"94%",left:"0%",zIndex:"99"}} className="nav tool"> 
         <Button type="primary" size="small" block><Icon type="appstore"/><div>菜 单</div></Button>
         <Button type="primary" size="small" block><Icon type="appstore"/><div>最小化</div></Button>
@@ -55,8 +79,8 @@ export default class Teach extends Component {
         <Button type="primary" size="small" block className="at-right-border" onClick={()=>this.next()}><Icon type="appstore"/><div>下一页</div></Button>
       </div> 
      
-      <div style={{position:"absolute" ,height:"auto",top:"30%",right:"0",zIndex:"99"}}  ref="shrink" className="nav col tool"> 
-        <Button type="primary" size="small" block><Icon type="appstore"/><div>指针</div></Button>
+      <div style={{position:"absolute" ,height:"auto",top:"30%",right:"0",zIndex:"99"}}  ref="shrink" className="nav col tool" onClick={function(){console.log("yiwaii")}}> 
+        <Button type="primary" size="small" block ><Icon type="appstore"/><div>指针</div></Button>
         <Button type="primary" size="small" block><Icon type="appstore"/><div>画笔</div></Button>
         <Button type="primary" size="small" block ><Icon type="appstore"/><div>橡皮檫</div></Button>
         <Button type="primary" size="small" block ><Icon type="appstore"/><div>撤销</div></Button>
@@ -64,9 +88,7 @@ export default class Teach extends Component {
         <Button type="primary" size="small" block ><Icon type="appstore"/><div>交流</div></Button>
         <Button type="primary" size="small" block onClick={()=>this.shrink()}><Icon className="shrink" style={{height:"12px"}} type="appstore"/></Button>
       </div> 
-      <div style={{position:"absolute" ,height:"auto",top:"50%",right:"0",zIndex:"98",opacity:"0.8"}}   className="nav col tool"> 
-        <Button type="primary" size="small" block onClick={()=>this.shrink()}><Icon className="shrink" style={{height:"12px"}} type="appstore"/></Button>
-    </div> 
+      
       <Carousel afterChange={this.onChange} style={{height:"100%"}} dots={false} ref="Carousel">
         <div>   
             <img src="http://bpic.588ku.com//back_origin_min_pic/19/04/16/aba3ab2789b1aea6c7412512c41e887d.jpg" alt="" height="971" width="1680"/>
