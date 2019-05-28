@@ -115,9 +115,9 @@ class Preview extends Component {
              <br />
              <Row >
                <Col span={1}></Col>
-               <Col span={8}><Icon type="delete"/>2534</Col>
-               <Col span={7}><Icon type="rollback" />12万</Col>
-               <Col span={7}><Icon type="rollback" />367</Col>
+               <Col span={8}><Icon type="message" />2534</Col>
+               <Col span={7}><Icon type="heart" />12万</Col>
+               <Col span={7}><Icon type="share-alt" />367</Col>
                <Col span={1}></Col>
              </Row>
            </Card>
@@ -134,7 +134,7 @@ class Preview extends Component {
       <Col span={17} style={{textAlign:"right"}}>
       <img alt="example"src="https://gw.alipayobjects.com/zos/rmsportal/uVZonEtjWwmUZPBQfycs.png" height="550px"/>
       <div style={{position:"absolute",bottom:"0%",right:"1%",zIndex:"99",fontSize:"42px"}}> 
-       <Icon type="appstore"/>
+       <Icon type="fullscreen" />
       </div>         
       </Col>
       <Col span={7} style={{textAlign:"left"}}>
@@ -178,20 +178,20 @@ class Preview extends Component {
         <Divider>你可以对课件进行以下操作</Divider>
        <Row  style={{margin:"0px 0px 0px 10px"}}>
         <Col span={4} style={{textAlign:"center",fontSize:"14px"}}>
-          <Icon type="appstore"  style={{fontSize:"20px"}}/>
+        <Icon type="download" style={{fontSize:"20px"}}/>
           <div>下载</div>
          </Col>
          <Col span={4} style={{textAlign:"center",fontSize:"14px"}}>
-          <Icon type="appstore"  style={{fontSize:"20px"}}/>
+         <Icon type="like" style={{fontSize:"20px"}}/>
           <div>点赞</div>
          </Col>
          <Col span={4} style={{textAlign:"center",fontSize:"14px"}}>
-          <Icon type="appstore"  style={{fontSize:"20px"}}/>
+         <Icon type="share-alt"  style={{fontSize:"20px"}}/>
           <div>分享</div>
          </Col>
          <Col span={4} style={{textAlign:"center",fontSize:"14px"}}>
-          <Icon type="appstore"  style={{fontSize:"20px"}}/>
-          <div>收藏</div>
+         <Icon type="edit" style={{fontSize:"20px"}}/>
+          <div>编辑</div>
          </Col>
        </Row>
       </Col>
